@@ -104,7 +104,7 @@ function Header() {
           cursor: pointer;
           font-family: var(--font-sans);
         }
-        .header__logo:hover { color: var(--accent); }
+        .header__logo:hover { color: #a855f7; }
         .header__links {
           display: flex;
           list-style: none;
@@ -119,7 +119,7 @@ function Header() {
           cursor: pointer;
           transition: color 0.2s ease;
         }
-        .header__links button:hover { color: var(--accent); }
+        .header__links button:hover { color: #a855f7; }
         .header__social {
           display: flex;
           gap: 1rem;
@@ -135,8 +135,8 @@ function Header() {
           transition: color 0.2s, background 0.2s;
         }
         .header__social-link:hover {
-          color: var(--accent);
-          background: var(--accent-dim);
+          color: #a855f7;
+          background: rgba(168, 85, 247, 0.15);
         }
         .icon--github::before { content: '⌘'; font-size: 1.2rem; }
         .icon--linkedin::before { content: 'in'; font-size: 0.9rem; font-weight: 600; }
@@ -159,7 +159,7 @@ function Header() {
           transform: translateY(0);
         }
         .hero__greeting {
-          color: var(--accent);
+          color: #a855f7;
           font-size: 1rem;
           font-family: var(--font-mono);
           margin-bottom: 0.5rem;
@@ -203,17 +203,17 @@ function Header() {
         }
         .btn:hover { transform: translateY(-2px); }
         .btn--primary {
-          background: var(--accent);
-          color: var(--bg-primary);
+          background: #a855f7;
+          color: #0a0a0f;
           border: none;
         }
-        .btn--primary:hover { box-shadow: 0 8px 24px var(--accent-glow); }
+        .btn--primary:hover { box-shadow: 0 8px 24px rgba(168, 85, 247, 0.25); }
         .btn--outline {
           background: transparent;
-          color: var(--accent);
-          border: 2px solid var(--accent);
+          color: #a855f7;
+          border: 2px solid #a855f7;
         }
-        .btn--outline:hover { background: var(--accent-dim); }
+        .btn--outline:hover { background: rgba(168, 85, 247, 0.15); }
         .hero__scroll {
           position: absolute;
           bottom: 2rem;
@@ -225,7 +225,7 @@ function Header() {
           width: 6px;
           height: 6px;
           border-radius: 50%;
-          background: var(--accent);
+          background: #a855f7;
           animation: float 2s ease-in-out infinite;
         }
       `}</style>

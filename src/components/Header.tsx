@@ -49,7 +49,6 @@ function Header() {
         </a>
         <ul className="header__links">
           <li><a href="#about" onClick={(e) => handleNavClick(e, 'about')}>About</a></li>
-          <li><a href="#projects" onClick={(e) => handleNavClick(e, 'projects')}>Projects</a></li>
           <li><a href="#experience" onClick={(e) => handleNavClick(e, 'experience')}>Experience</a></li>
           <li><a href="#contact" onClick={(e) => handleNavClick(e, 'contact')}>Contact</a></li>
         </ul>
@@ -77,7 +76,7 @@ function Header() {
           Bridging data, strategy, and business to drive smarter decisions.
         </p>
         <div className="hero__actions">
-          <button onClick={() => scrollTo('projects')} className="btn btn--primary">
+          <button onClick={() => scrollTo('experience')} className="btn btn--primary">
             View my work
           </button>
           <button onClick={() => scrollTo('contact')} className="btn btn--outline">

@@ -52,7 +52,7 @@ function Experience() {
     <section id="experience" className="section experience">
       <div className="section__inner">
         <h2 className="section__title">
-          <span className="section__number">03.</span> Experience
+          <span className="section__number">02.</span> Experience
         </h2>
         <div className="experience__timeline">
           {experience.map((item) => (

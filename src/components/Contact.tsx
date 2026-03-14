@@ -2,7 +2,7 @@ function Contact() {
   return (
     <section id="contact" className="section contact">
       <div className="section__inner contact__inner">
-        <p className="contact__label">04. What's next?</p>
+        <p className="contact__label">03. What's next?</p>
         <h2 className="contact__title">Get in touch</h2>
         <p className="contact__text">
           I'm open to new opportunities and happy to chat. Say hello—whether it's

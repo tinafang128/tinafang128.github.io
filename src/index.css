@@ -112,6 +112,14 @@ a:hover {
   animation: fadeInUp 0.6s ease-out forwards;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in-up {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
 .animate-fade-in {
   animation: fadeIn 0.6s ease-out forwards;
 }
@@ -127,7 +135,7 @@ a:hover {
 .section {
   padding: var(--section-padding) 1.5rem;
   max-width: 100%;
-  scroll-margin-top: 5rem; /* prevent fixed header from covering section when scrolling to anchor */
+  scroll-margin-top: 6rem; /* prevent fixed header from covering section when scrolling to anchor */
 }
 
 .section__inner {

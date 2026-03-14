@@ -17,25 +17,41 @@ function Header() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
+  // Scroll to hash on load (e.g. open page with #experience)
+  useEffect(() => {
+    const hash = window.location.hash.slice(1)
+    if (hash && document.getElementById(hash)) {
+      const el = document.getElementById(hash)
+      if (el) setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100)
+    }
+  }, [])
+
   const scrollTo = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+    const el = document.getElementById(id)
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault()
+    scrollTo(id)
   }
 
   return (
     <header className={`header ${scrolled ? 'header--scrolled' : ''}`}>
       <nav className="header__nav">
-        <button
-          onClick={() => scrollTo('hero')}
+        <a
+          href="#hero"
+          onClick={(e) => handleNavClick(e, 'hero')}
           className="header__logo"
           aria-label="Home"
         >
           Portfolio
-        </button>
+        </a>
         <ul className="header__links">
-          <li><button onClick={() => scrollTo('about')}>About</button></li>
-          <li><button onClick={() => scrollTo('projects')}>Projects</button></li>
-          <li><button onClick={() => scrollTo('experience')}>Experience</button></li>
-          <li><button onClick={() => scrollTo('contact')}>Contact</button></li>
+          <li><a href="#about" onClick={(e) => handleNavClick(e, 'about')}>About</a></li>
+          <li><a href="#projects" onClick={(e) => handleNavClick(e, 'projects')}>Projects</a></li>
+          <li><a href="#experience" onClick={(e) => handleNavClick(e, 'experience')}>Experience</a></li>
+          <li><a href="#contact" onClick={(e) => handleNavClick(e, 'contact')}>Contact</a></li>
         </ul>
         <div className="header__social">
           {socialLinks.map(({ name, url, icon }) => (
@@ -103,6 +119,7 @@ function Header() {
           border: none;
           cursor: pointer;
           font-family: var(--font-sans);
+          text-decoration: none;
         }
         .header__logo:hover { color: #a855f7; }
         .header__links {
@@ -110,7 +127,7 @@ function Header() {
           list-style: none;
           gap: 2rem;
         }
-        .header__links button {
+        .header__links a {
           background: none;
           border: none;
           color: var(--text-secondary);
@@ -118,8 +135,9 @@ function Header() {
           font-size: 0.95rem;
           cursor: pointer;
           transition: color 0.2s ease;
+          text-decoration: none;
         }
-        .header__links button:hover { color: #a855f7; }
+        .header__links a:hover { color: #a855f7; }
         .header__social {
           display: flex;
           gap: 1rem;

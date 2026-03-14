@@ -56,11 +56,7 @@ function Experience() {
         </h2>
         <div className="experience__timeline">
           {experience.map((item, i) => (
-            <article
-              key={`${item.company}-${item.role}`}
-              className="experience__item animate-fade-in-up"
-              style={{ animationDelay: `${0.1 + i * 0.1}s` }}
-            >
+            <article key={`${item.company}-${item.role}`} className="experience__item">
               <div className="experience__line" aria-hidden />
               <div className="experience__content">
                 <div className="experience__header">

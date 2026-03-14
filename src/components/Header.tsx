@@ -69,7 +69,7 @@ function Header() {
         </div>
       </nav>
 
-      <section id="hero" className={`hero ${mounted ? 'hero--visible' : ''}`}>
+      <section id="hero" className={`hero ${mounted ? 'hero--visible' : ''} ${scrolled ? 'hero--hidden' : ''}`}>
         <p className="hero__greeting">Hi, I'm</p>
         <h1 className="hero__name">Jinghan (Tina) Fang</h1>
         <p className="hero__title">CSBA undergraduate at USC</p>
@@ -175,6 +175,15 @@ function Header() {
         .hero--visible {
           opacity: 1;
           transform: translateY(0);
+        }
+        .hero--hidden {
+          min-height: 0;
+          max-height: 0;
+          padding: 0;
+          overflow: hidden;
+          opacity: 0;
+          pointer-events: none;
+          transition: opacity 0.3s ease, max-height 0.3s ease, padding 0.3s ease;
         }
         .hero__greeting {
           color: #a855f7;

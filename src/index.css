@@ -127,6 +127,7 @@ a:hover {
 .section {
   padding: var(--section-padding) 1.5rem;
   max-width: 100%;
+  scroll-margin-top: 5rem; /* prevent fixed header from covering section when scrolling to anchor */
 }
 
 .section__inner {

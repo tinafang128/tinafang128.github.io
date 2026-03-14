@@ -6,9 +6,9 @@
   --text-primary: #f0f0f5;
   --text-secondary: #a0a0b0;
   --text-muted: #6b6b7b;
-  --accent: #00d4aa;
-  --accent-dim: rgba(0, 212, 170, 0.15);
-  --accent-glow: rgba(0, 212, 170, 0.25);
+  --accent: #a855f7;
+  --accent-dim: rgba(168, 85, 247, 0.15);
+  --accent-glow: rgba(168, 85, 247, 0.25);
   --border: #2a2a3a;
   --font-sans: 'Outfit', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
@@ -48,7 +48,7 @@ a {
 }
 
 a:hover {
-  color: #00f5c4;
+  color: #c084fc;
 }
 
 /* Scrollbar */

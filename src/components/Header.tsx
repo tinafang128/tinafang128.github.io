@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react'
 const socialLinks = [
   { name: 'GitHub', url: 'https://github.com/tinafang128', icon: 'github' },
   { name: 'LinkedIn', url: 'https://www.linkedin.com/in/tina-fang-b08b29331', icon: 'linkedin' },
-  { name: 'Twitter', url: 'https://twitter.com', icon: 'twitter' },
 ]
 
 function Header() {
@@ -157,7 +156,6 @@ function Header() {
         }
         .icon--github::before { content: '⌘'; font-size: 1.2rem; }
         .icon--linkedin::before { content: 'in'; font-size: 0.9rem; font-weight: 600; }
-        .icon--twitter::before { content: '𝕏'; font-size: 1rem; }
 
         .hero {
           min-height: 100vh;
